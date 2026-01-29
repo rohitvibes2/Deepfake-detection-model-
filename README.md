@@ -1,10 +1,10 @@
-#DeepFake Image Detection using MesoNet (Meso4)
+# DeepFake Image Detection using MesoNet (Meso4)
 
 This project implements a DeepFake image detection system using a Convolutional Neural Network (CNN) based on the MesoNet (Meso4) architecture. The goal is to classify facial images as Real or Fake (DeepFake) by learning visual inconsistencies and artifacts introduced during DeepFake generation.
 
 The system provides a complete pipeline including:
 
-Data preprocessing
+# Data preprocessing
 
 Model training
 
@@ -14,12 +14,9 @@ Single-image inference with confidence score
 
 This project is intended for educational and academic purposes, particularly for understanding how deep learning can be applied to media forensics.
 
- ##Objectives
-
+# Objectives
 Detect DeepFake images using a lightweight CNN architecture
-
 Train a model on labeled real and fake face images
-
 Evaluate performance on unseen test data
 
 Predict the authenticity of a single image with a confidence score
@@ -30,7 +27,7 @@ Build a reusable and modular DeepFake detection pipeline
 
 The project uses Meso4, a compact CNN specifically designed for DeepFake detection.
 
-Key architectural components:
+# Key architectural components:
 
 Convolutional layers with varying kernel sizes
 
@@ -44,7 +41,7 @@ Fully connected layers for classification
 
 Sigmoid output layer for binary classification
 
-Output Interpretation:
+# Output Interpretation:
 
 Output value ∈ [0, 1]
 
@@ -52,7 +49,7 @@ Output value ∈ [0, 1]
 
 ≤ 0.5 → Fake
 
-📂 Dataset Structure
+# Dataset Structure
 
 The dataset must be organized in the following directory structure:
 
@@ -74,7 +71,7 @@ Training and testing datasets are kept strictly separate
 ### Note:
 Due to size and licensing restrictions, the dataset is not included in this repository. Users must prepare their own dataset following the above structure.
 
-⚙️ Data Preprocessing
+# Data Preprocessing
 
 All images are resized to 256 × 256
 
@@ -82,7 +79,7 @@ Pixel values are normalized to the range [0, 1]
 
 Data is loaded using Keras ImageDataGenerator for memory-efficient training
 
-🏋️ Model Training
+# Model Training
 
 Loss Function: Binary Cross-Entropy
 
@@ -94,7 +91,7 @@ Validation performed on the test dataset
 
 Trained model weights are saved to avoid retraining and to enable fast inference.
 
-🔍 Inference & Prediction
+# Inference & Prediction
 
 The trained model can be used to:
 
